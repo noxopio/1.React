@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import confetti from 'canvas-confetti'
 import { Square } from './components/square.jsx'
-import { TURNS ,WINNER_COMBOS} from './components/constants.jsx'
+import { TURNS, WINNER_COMBOS } from './components/constants.jsx'
 
 
 
-function App() {
-
+function App () {
   const [board, setBoard] = useState(Array(9).fill(null))
 
   const [turn, setTurn] = useState(TURNS.X)
@@ -33,9 +32,9 @@ function App() {
     setWinner(null)
   }
 
-  const checkEndGame =(newBoard)=>{
+  const checkEndGame = (newBoard) => {
 
-    return newBoard.every((square)=> square !== null)
+    return newBoard.every((square) => square !== null)
 
 
   }
@@ -108,15 +107,12 @@ function App() {
                 </footer>
               </div>
 
-
-
             </section>
 
-          )}
-
+          )
+        }
 
       </section>
-
 
     </main>
   )
