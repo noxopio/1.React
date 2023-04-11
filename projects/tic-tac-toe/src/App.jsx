@@ -3,8 +3,6 @@ import confetti from 'canvas-confetti'
 import { Square } from './components/square.jsx'
 import { TURNS, WINNER_COMBOS } from './components/constants.jsx'
 
-
-
 function App () {
   const [board, setBoard] = useState(Array(9).fill(null))
 
@@ -14,7 +12,6 @@ function App () {
 
   const checkWinner = (boardToCheck) => {
     for (const combo of WINNER_COMBOS) {
-
       const [a, b, c] = combo
       if (
         boardToCheck[a] &&
@@ -31,9 +28,7 @@ function App () {
     setTurn(TURNS.X)
     setWinner(null)
   }
-
   const checkEndGame = (newBoard) => {
-
     return newBoard.every((square) => square !== null)
 
 
